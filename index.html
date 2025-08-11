@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Sayang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  const hearts = [];
+
+  document.addEventListener("mousemove", function (e) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = (e.pageX - 5) + "px";
+    heart.style.top = (e.pageY - 5) + "px";
+    document.body.appendChild(heart);
+    hearts.push(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 1000);
+  });
+</script>
+<body>
+    <div class="balloon-container"></div>
+    <div class="balloon-container">
+  <!-- Belon 1 -->
+  <div class="balloon-wrap" style="left: 10%; animation-delay: 0s;">
+    <div class="balloon red"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q7,25 5,50 Q3,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100
+          " />
+      </path>
+    </svg>
+  </div>
+
+  <!-- Belon 2 -->
+  <div class="balloon-wrap" style="left: 30%; animation-delay: 1s;">
+    <div class="balloon blue"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q7,25 5,50 Q3,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100
+          " />
+      </path>
+    </svg>
+  </div>
+
+  <!-- Belon 3 -->
+  <div class="balloon-wrap" style="left: 50%; animation-delay: 2s;">
+    <div class="balloon green"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q7,25 5,50 Q3,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100
+          " />
+      </path>
+    </svg>
+  </div>
+
+  <!-- Belon 4 -->
+  <div class="balloon-wrap" style="left: 70%; animation-delay: 3s;">
+    <div class="balloon yellow"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q7,25 5,50 Q3,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100
+          " />
+      </path>
+    </svg>
+  </div>
+
+  <!-- Belon 5 -->
+  <div class="balloon-wrap" style="left: 90%; animation-delay: 4s;">
+    <div class="balloon pink"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q3,25 5,50 Q7,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100
+          " />
+      </path>
+    </svg>
+  </div>
+</div>
+
+  <div class="card-container">
+    <button id="openCardBtn">Click to Open Your Birthday Card 💌</button>
+    
+    <div id="birthdayCard" class="hidden">
+      <h1>🎉 Happy Birthday Sayang! 🎂</h1>
+      <div id="ucapan" style="white-space: pre-line;">
+💖Maira💖
+
+Sayangku Sofea Khairani,
+
+Hari ini bukan sekadar hari lahir awak... tapi hari yang Allah hadiahkan seorang insan yang luar biasa untuk saya. Seorang yang bukan sahaja cantik di mata, tapi indah pada hati. Seorang yang mampu buat saya rasa tenang bila bersama, dan kuat bila saya lemah...❤️❤️❤️
+
+Setiap gelak tawa awak, buat dunia saya rasa lebih terang. Setiap suara awak keluar, jadi melodi yang paling indah dalam hidup saya sayang... sedap pulak tu nyanyi hihi❤️❤️❤️... Dan setiap saat dengan awak sayang, buat saya sedar... betapa bertuahnya saya memiliki awak sayang...❤️❤️❤️
+
+Hari ini saya nak ucapkan terima kasih sebab jadi pendengar saya dan orang yang selalu percaya pada saya walaupun saya sendiri tak percaya pada diri saya...❤️❤️❤️..awak ialah my other half… dan jugak awak adalah kawan, peneman, dan rumah tempat hati saya mengadu...saya tau saya ni tak kuat suka mengadu kat awak pape...yeah orang kat luar nampak saya kuat and lasak but dengan awak ..awak nampak sisi saya yang lain yang lemah..sebab ape?..sebab saya selesa dengan awak..saya suka luah kat awak sayang..Terimah Kasih selalu ada dengan saya sayang❤️❤️❤️..saya doakan yang kita Bersama sampai bila bila and hari Bahagia awak akan tiba ...Aku terima nikahnya...ARGHHH tak sabar nyeee🥰❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+
+saya doakan semoga setiap impian awak tercapai sayang satu demi satu❤️❤️❤️❤️❤️❤️❤️... Semoga rezeki sentiasa mengalir tanpa henti. Semoga kesihatan, kebahagiaan, dan keberkatan sentiasa ada dalam hidup awak sayang. Dan semoga apa pun yang berlaku, kita akan tetap bersama sampai bila-bila.
+
+Happy Birthday, sayangkuuuuu.😘❤️❤️❤️❤️
+Saya sayang awak maira, hari ini, esok, dan selamanya...Thanks you ade dalam hidup saya 💐❤️🎂
+love you maira❤️
+</div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+  <audio id="bgMusic" loop preload="auto">
+  <source src="star.mp3" type="audio/mpeg">
+</audio>
+  <script>
+  const bg = document.getElementById('bgMusic');
+const openBtn = document.getElementById('openCardBtn');
+
+openBtn.addEventListener('click', () => {
+    const card = document.getElementById('birthdayCard');
+    card.classList.remove('hidden');
+
+    bg.play().catch(err => {
+        console.warn('Audio play rejected:', err);
+        bg.controls = true; // tunjuk controls kalau autoplay kena block
+    });
+});
+</script>
+<script>
+</script>
+</body>
+</html>
