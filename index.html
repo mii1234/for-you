@@ -1,133 +1,151 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maafkan saya?</title>
-  <style>
-    :root{
-      --bg:#fbf7f2;
-      --ink:#2f2a26;
-      --ring:#eadfce;
-      --btn:#ffffff;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-    .wrap{position:relative;min-height:100dvh;display:grid;place-items:center;padding:20px}
-    .card{position:relative;background:#fffdf9;border:1px solid var(--ring);border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.06);padding:28px;max-width:min(680px,92vw);text-align:center}
-    h1{margin:0 0 10px;font-size:clamp(26px,4.5vw,38px)}
-    p{margin:0 0 18px}
-    .arena{position:relative;height:220px;max-width:520px;margin:0 auto;overflow:hidden;}
-    .btn{position:absolute;inset:auto auto 0 50%;transform:translateX(-110%);
-      appearance:none;border:1px solid var(--ring);background:var(--btn);padding:12px 18px;border-radius:14px;font-weight:700;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.07)}
-    .btn:active{transform:translateX(-110%) scale(.98)}
-    #no{left:50%;transform:translateX(10%);}
-    #thanks{display:none;margin-top:8px;font-weight:600}
-    .hint{font-size:12px;color:#857a72;margin-top:10px}
-    /* Animasi gambar terapung */
-    .fly {
-      position: absolute;
-      bottom: 0;
-      width: 40px; /* saiz boleh ubah */
-      animation: floatUp 4s linear forwards;
-      pointer-events: none;
-    }
-    @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 1; }
-      100% { transform: translateY(-300px) scale(0.6); opacity: 0; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Sayang</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  const hearts = [];
+
+  document.addEventListener("mousemove", function (e) {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = (e.pageX - 5) + "px";
+    heart.style.top = (e.pageY - 5) + "px";
+    document.body.appendChild(heart);
+    hearts.push(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 1000);
+  });
+</script>
 <body>
-  <div class="wrap">
-    <main class="card" aria-live="polite">
-      <h1>Maafkan saya sayang🥹?</h1>
-      <p>Saya betul-betul menyesal. Saya banyak buat salah dengan awak. Boleh tak beri saya peluang?</p>
-
-      <div class="arena" id="arena">
-        <button id="yes" class="btn" aria-label="Yes">Yes ❤️</button>
-        <button id="no" class="btn" aria-label="No">No 🥹</button>
-      </div>
-
-      <div id="thanks">Yeayyy sayang maafkan saya. Terima kasih sayang❤️❤️❤️! Saya hargai sangat awak ❤️</div>
-      <div class="hint">(Cuba sayang tekan No… kalau dapatlah hehe 😜)</div>
-    </main>
+    <div class="balloon-container"></div>
+    <div class="balloon-container">
+  <!-- Belon 1 -->
+  <div class="balloon-wrap" style="left: 10%; animation-delay: 0s;">
+    <div class="balloon red"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q7,25 5,50 Q3,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100
+          " />
+      </path>
+    </svg>
   </div>
 
+  <!-- Belon 2 -->
+  <div class="balloon-wrap" style="left: 30%; animation-delay: 1s;">
+    <div class="balloon blue"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q7,25 5,50 Q3,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100
+          " />
+      </path>
+    </svg>
+  </div>
+
+  <!-- Belon 3 -->
+  <div class="balloon-wrap" style="left: 50%; animation-delay: 2s;">
+    <div class="balloon green"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q7,25 5,50 Q3,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100
+          " />
+      </path>
+    </svg>
+  </div>
+
+  <!-- Belon 4 -->
+  <div class="balloon-wrap" style="left: 70%; animation-delay: 3s;">
+    <div class="balloon yellow"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q7,25 5,50 Q3,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100
+          " />
+      </path>
+    </svg>
+  </div>
+
+  <!-- Belon 5 -->
+  <div class="balloon-wrap" style="left: 90%; animation-delay: 4s;">
+    <div class="balloon pink"></div>
+    <svg class="string" viewBox="0 0 10 100">
+      <path d="M5,0 Q3,25 5,50 Q7,75 5,100" stroke="#333" stroke-width="0.5" fill="none">
+        <animate attributeName="d" dur="3s" repeatCount="indefinite"
+          values="
+            M5,0 Q3,25 5,50 Q7,75 5,100;
+            M5,0 Q7,25 5,50 Q3,75 5,100;
+            M5,0 Q3,25 5,50 Q7,75 5,100
+          " />
+      </path>
+    </svg>
+  </div>
+</div>
+
+  <div class="card-container">
+    <button id="openCardBtn">For the One Who Holds My Heart❤️</button>
+    
+    <div id="birthdayCard" class="hidden">
+      <h1>🎉 Happy Birthday Sayang! 🎂</h1>
+      <div id="ucapan" style="white-space: pre-line;">
+💖Maira💖
+
+Sayangku Sofea Khairani,
+
+Hari ini bukan sekadar hari lahir awak... tapi hari yang Allah hadiahkan seorang insan yang luar biasa untuk saya. Seorang yang bukan sahaja cantik di mata, tapi indah pada hati. Seorang yang mampu buat saya rasa tenang bila bersama, dan kuat bila saya lemah...❤️❤️❤️
+
+Setiap gelak tawa awak, buat dunia saya rasa lebih terang. Setiap suara awak keluar, jadi melodi yang paling indah dalam hidup saya sayang... sedap pulak tu nyanyi hihi❤️❤️❤️... Dan setiap saat dengan awak sayang, buat saya sedar... betapa bertuahnya saya memiliki awak sayang...❤️❤️❤️
+
+Hari ini saya nak ucapkan terima kasih sebab jadi pendengar saya dan orang yang selalu percaya pada saya walaupun saya sendiri tak percaya pada diri saya...❤️❤️❤️..awak ialah my other half… dan jugak awak adalah kawan, peneman, dan rumah tempat hati saya mengadu...saya tau saya ni tak kuat suka mengadu kat awak pape...yeah orang kat luar nampak saya kuat and lasak but dengan awak ..awak nampak sisi saya yang lain yang lemah..sebab ape?..sebab saya selesa dengan awak..saya suka luah kat awak sayang..Terimah Kasih selalu ada dengan saya sayang❤️❤️❤️..saya doakan yang kita Bersama sampai bila bila and hari Bahagia awak akan tiba ...Aku terima nikahnya...ARGHHH tak sabar nyeee🥰❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+
+saya doakan semoga setiap impian awak tercapai sayang satu demi satu❤️❤️❤️❤️❤️❤️❤️... Semoga rezeki sentiasa mengalir tanpa henti. Semoga kesihatan, kebahagiaan, dan keberkatan sentiasa ada dalam hidup awak sayang. Dan semoga apa pun yang berlaku, kita akan tetap bersama sampai bila-bila.
+
+Happy Birthday, sayangkuuuuu.😘❤️❤️❤️❤️
+Saya sayang awak maira, hari ini, esok, dan selamanya...Thanks you ade dalam hidup saya 💐❤️🎂
+love you maira❤️
+</div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+  <audio id="bgMusic" loop preload="auto">
+  <source src="star.mp3" type="audio/mpeg">
+</audio>
   <script>
-    const arena = document.getElementById('arena');
-    const yesBtn = document.getElementById('yes');
-    const noBtn  = document.getElementById('no');
-    const thanks = document.getElementById('thanks');
+  const bg = document.getElementById('bgMusic');
+const openBtn = document.getElementById('openCardBtn');
 
-    function centerButtons(){
-      const a = arena.getBoundingClientRect();
-      const y = yesBtn.getBoundingClientRect();
-      const n = noBtn.getBoundingClientRect();
-      yesBtn.style.top = (a.height/2 - y.height/2) + 'px';
-      yesBtn.style.left = (a.width/2 - y.width - 10) + 'px';
-      noBtn.style.top  = (a.height/2 - n.height/2) + 'px';
-      noBtn.style.left = (a.width/2 + 10) + 'px';
-    }
+openBtn.addEventListener('click', () => {
+    const card = document.getElementById('birthdayCard');
+    card.classList.remove('hidden');
 
-    function moveNo(){
-      const a = arena.getBoundingClientRect();
-      const n = noBtn.getBoundingClientRect();
-      const y = yesBtn.getBoundingClientRect();
-      const padding = 6;
-      const maxLeft = a.width - n.width - padding;
-      const maxTop  = a.height - n.height - padding;
-
-      let tries = 0; let left, top;
-      do{
-        left = padding + Math.random() * (maxLeft - padding);
-        top  = padding + Math.random() * (maxTop  - padding);
-        tries++;
-        const nx = left + n.width/2, ny = top + n.height/2;
-        const yx = (y.left - a.left) + y.width/2;
-        const yy = (y.top  - a.top ) + y.height/2;
-        var ok = Math.hypot(nx - yx, ny - yy) > Math.max(n.width, n.height) * 1.6;
-      } while(!ok && tries < 30);
-
-      noBtn.style.left = left + 'px';
-      noBtn.style.top  = top  + 'px';
-    }
-
-    ['mouseenter','mouseover','mousedown','touchstart','focus'].forEach(evt=>{
-      noBtn.addEventListener(evt, e=>{
-        e.preventDefault();
-        moveNo();
-      }, {passive:false});
+    bg.play().catch(err => {
+        console.warn('Audio play rejected:', err);
+        bg.controls = true; // tunjuk controls kalau autoplay kena block
     });
-    noBtn.addEventListener('click', e=>{ e.preventDefault(); moveNo(); });
-
-    // Fungsi untuk cipta gambar terapung
-    function createFlyingImage() {
-      const img = document.createElement('img');
-      img.src = 'hi.jpg'; // ganti dengan path gambar awak
-      img.className = 'fly';
-      img.style.left = Math.random() * arena.clientWidth + 'px';
-      img.style.width = (30 + Math.random()*20) + 'px';
-      arena.appendChild(img);
-      setTimeout(() => img.remove(), 4000);
-    }
-
-    // Gambar keluar selepas tekan Yes
-    yesBtn.addEventListener('click', ()=>{
-      let imageInterval = setInterval(createFlyingImage, 400); // keluar setiap 400ms
-      thanks.style.display = 'block';
-      arena.style.pointerEvents = 'none';
-      yesBtn.style.opacity = '0';
-      noBtn.style.opacity = '0';
-      setTimeout(()=>{
-        yesBtn.style.display='none';
-        noBtn.style.display='none';
-      }, 300);
-    });
-
-    window.addEventListener('load', centerButtons);
-    window.addEventListener('resize', centerButtons);
-  </script>
+});
+</script>
+<script>
+</script>
 </body>
 </html>
